@@ -1,0 +1,12 @@
+/home/tote/IdeaProjects/calculadoraServlet_FranciscoA_Dominguez_Iceta/src/main/java/modelo/dao/OperacionDAO.java
+/home/tote/IdeaProjects/calculadoraServlet_FranciscoA_Dominguez_Iceta/src/main/java/controlador/Operacion.java
+/home/tote/IdeaProjects/calculadoraServlet_FranciscoA_Dominguez_Iceta/src/main/java/vista/Calculadora.java
+/home/tote/IdeaProjects/calculadoraServlet_FranciscoA_Dominguez_Iceta/src/main/java/controlador/servlets/Operadora.java
+/home/tote/IdeaProjects/calculadoraServlet_FranciscoA_Dominguez_Iceta/src/main/java/modelo/dao/Conexion.java
+/home/tote/IdeaProjects/calculadoraServlet_FranciscoA_Dominguez_Iceta/src/main/java/controlador/servlets/GestorPersistencia.java
+/home/tote/IdeaProjects/calculadoraServlet_FranciscoA_Dominguez_Iceta/src/main/java/controlador/Multiplicacion.java
+/home/tote/IdeaProjects/calculadoraServlet_FranciscoA_Dominguez_Iceta/src/main/java/controlador/Resta.java
+/home/tote/IdeaProjects/calculadoraServlet_FranciscoA_Dominguez_Iceta/src/main/java/modelo/Operacion.java
+/home/tote/IdeaProjects/calculadoraServlet_FranciscoA_Dominguez_Iceta/src/main/java/modelo/dao/DAO.java
+/home/tote/IdeaProjects/calculadoraServlet_FranciscoA_Dominguez_Iceta/src/main/java/controlador/Suma.java
+/home/tote/IdeaProjects/calculadoraServlet_FranciscoA_Dominguez_Iceta/src/main/java/controlador/Division.java

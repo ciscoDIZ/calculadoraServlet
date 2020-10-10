@@ -1,0 +1,12 @@
+vista/Calculadora.class
+controlador/Multiplicacion.class
+controlador/Division.class
+modelo/dao/OperacionDAO.class
+modelo/Operacion.class
+controlador/Operacion.class
+modelo/dao/Conexion.class
+controlador/servlets/Operadora.class
+controlador/Suma.class
+modelo/dao/DAO.class
+controlador/servlets/GestorPersistencia.class
+controlador/Resta.class

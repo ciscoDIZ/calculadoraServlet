@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="calculadoraServlet_FranciscoA_Dominguez_Iceta:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>calculadoraServlet_FranciscoA_Dominguez_Iceta</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="calculadoraServlet_FranciscoA_Dominguez_Iceta.war">
+      <element id="artifact" artifact-name="calculadoraServlet_FranciscoA_Dominguez_Iceta:war exploded" />
+    </root>
+  </artifact>
+</component>

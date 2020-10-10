@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="calculadoraServlet_FranciscoA_Dominguez_Iceta:war exploded">
+    <output-path>$PROJECT_DIR$/target/calculadoraServlet_FranciscoA_Dominguez_Iceta</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>calculadoraServlet_FranciscoA_Dominguez_Iceta</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="calculadoraServlet_FranciscoA_Dominguez_Iceta" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: org.xerial:sqlite-jdbc:3.30.1" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/calculadoraServlet_FranciscoA_Dominguez_Iceta/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="calculadoraServlet_FranciscoA_Dominguez_Iceta/web/Web" />
+    </root>
+  </artifact>
+</component>
