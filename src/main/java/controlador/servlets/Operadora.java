@@ -1,6 +1,6 @@
 package controlador.servlets;
 
-import modelo.dao.Conexion;
+import modelo.dao.ConexionSqlite;
 import modelo.dao.OperacionDAO;
 import vista.Calculadora;
 
@@ -22,7 +22,7 @@ public class Operadora implements Servlet {
     public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
         Calculadora calculadora = new Calculadora();
         try {
-            Conexion.setNewConnection("historial.db");
+            ConexionSqlite.setNewConnection("historial.db");
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -33,7 +33,7 @@ public class Operadora implements Servlet {
         double resultadoDouble = calculadora.operar(opa,opb,opr);
         OperacionDAO oDao = new OperacionDAO(null, opa, opb, resultadoDouble, opr);
         oDao.insert();
-        String res = "<h2>"+resultadoDouble+"</h2>";
+        String res = "<h2>"+resultadoDouble+"</h2>"+getClass().getResource("");
         request.setAttribute("res", res);
         RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
         dispatcher.forward(request,response);

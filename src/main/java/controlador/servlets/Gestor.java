@@ -1,6 +1,6 @@
 package controlador.servlets;
 
-import modelo.dao.Conexion;
+import modelo.dao.ConexionSqlite;
 
 import javax.servlet.*;
 import java.io.IOException;
@@ -11,7 +11,7 @@ public class Gestor implements Servlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
         try {
-            Conexion.setNewConnection("src/var/historial.db");
+            ConexionSqlite.setNewConnection("historial.db");
         }catch (Exception e){
             e.printStackTrace();
         }
