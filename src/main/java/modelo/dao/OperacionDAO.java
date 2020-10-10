@@ -24,16 +24,15 @@ public class OperacionDAO extends Operacion implements DAO{
     }
     
     private static Connection conectar() throws Exception{
-        ConexionSqlite conexionSqlite = ConexionSqlite.getConexion();
-        Connection connection = conexionSqlite.getConnection();
-        return connection;
+        ConexionMySQL conexionMySQL = ConexionMySQL.getConexion();
+        return conexionMySQL.getConn();
     }
     @Override
     public Object get() {
         try{
             Connection connection = conectar();
-            String query = "select * from "+ ConexionSqlite.TOPERACIONES+" where " +
-                    ConexionSqlite.TOPERACIONES_ID_OPERACION+" = "+id;
+            String query = "select * from "+ ConexionMySQL.TOPERACIONES+" where " +
+                    ConexionMySQL.TOPERACIONES_ID_OPERACION+" = "+id;
             try(Statement statement = connection.createStatement()){
                 ResultSet resultSet = statement.executeQuery(query);
                 if(resultSet.next()){
@@ -54,9 +53,9 @@ public class OperacionDAO extends Operacion implements DAO{
     public void insert() {
         try{
             Connection connection = conectar();
-            String query = "insert into "+ ConexionSqlite.TOPERACIONES+"("+
-                    ConexionSqlite.TOPERACIONES_OPERANDO_A+", "+ ConexionSqlite.TOPERACIONES_OPERANDO_B+
-                    ", "+ ConexionSqlite.TOPERACIONES_RESULTADO+", "+ ConexionSqlite.TOPERACIONES_OPERADOR+") values (?,?,?,?);";
+            String query = "insert into "+ ConexionMySQL.TOPERACIONES+"("+
+                    ConexionMySQL.TOPERACIONES_OPERANDO_A+", "+ ConexionMySQL.TOPERACIONES_OPERANDO_B+
+                    ", "+ ConexionMySQL.TOPERACIONES_RESULTADO+", "+ ConexionMySQL.TOPERACIONES_OPERADOR+") values (?,?,?,?);";
             try(PreparedStatement ps = connection.prepareStatement(query)){
                 ps.setDouble(1, operandoA);
                 ps.setDouble(2, operandoB);
@@ -73,8 +72,8 @@ public class OperacionDAO extends Operacion implements DAO{
     public void delete() {
         try {
             Connection connection = conectar();
-            String query = "delete from "+ ConexionSqlite.TOPERACIONES+" where "+
-                    ConexionSqlite.TOPERACIONES_ID_OPERACION+"="+id;
+            String query = "delete from "+ ConexionMySQL.TOPERACIONES+" where "+
+                    ConexionMySQL.TOPERACIONES_ID_OPERACION+"="+id;
             try(PreparedStatement ps = connection.prepareStatement(query)){
                 ps.execute();
             }
@@ -87,7 +86,7 @@ public class OperacionDAO extends Operacion implements DAO{
         ArrayList<OperacionDAO> resultados = new ArrayList<>();
         try{
             Connection connection = conectar();
-            String query = "select * from "+ ConexionSqlite.TOPERACIONES;
+            String query = "select * from "+ ConexionMySQL.TOPERACIONES;
             try(Statement s = connection.createStatement()){
                 ResultSet resultSet = s.executeQuery(query);
                 while(resultSet.next()){

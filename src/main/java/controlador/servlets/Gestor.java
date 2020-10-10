@@ -1,6 +1,7 @@
 package controlador.servlets;
 
-import modelo.dao.ConexionSqlite;
+import modelo.dao.ConexionMySQL;
+import modelo.dao.OperacionDAO;
 
 import javax.servlet.*;
 import java.io.IOException;
@@ -10,11 +11,7 @@ public class Gestor implements Servlet {
 
     @Override
     public void init(ServletConfig config) throws ServletException {
-        try {
-            ConexionSqlite.setNewConnection("historial.db");
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+
 
     }
 
@@ -24,8 +21,25 @@ public class Gestor implements Servlet {
     }
 
     @Override
-    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+    public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+        try {
+            ConexionMySQL.setNewConexion("historial","devuser", "Monst3r_");
+            String his = request.getParameter("his");
+            StringBuilder res=null;
+            if(his != null) {
+                res = new StringBuilder("<ul>");
+                for (OperacionDAO operacionDAO : OperacionDAO.getResultados()) {
+                    res.append("<li>").append(operacionDAO.toString()).append("</li>");
+                }
+                res.append("</ul>");
 
+            }
+            request.setAttribute("res", String.valueOf(res));
+            RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+            dispatcher.forward(request,response);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override

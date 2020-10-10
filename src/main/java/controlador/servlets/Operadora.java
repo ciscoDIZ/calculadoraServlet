@@ -1,6 +1,6 @@
 package controlador.servlets;
 
-import modelo.dao.ConexionSqlite;
+import modelo.dao.ConexionMySQL;
 import modelo.dao.OperacionDAO;
 import vista.Calculadora;
 
@@ -22,7 +22,7 @@ public class Operadora implements Servlet {
     public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
         Calculadora calculadora = new Calculadora();
         try {
-            ConexionSqlite.setNewConnection("historial.db");
+            ConexionMySQL.setNewConexion("historial", "devuser", "Monst3r_");
         }catch (Exception e){
             e.printStackTrace();
         }
