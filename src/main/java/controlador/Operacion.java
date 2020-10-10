@@ -26,11 +26,7 @@ public abstract class Operacion {
 		this.operandoB = operandoB;
 		this.resultado = resultado;
 		this.operador = operador;
-		try {
-			Conexion.setNewConnection("historial.db");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+
 		
 	}
 

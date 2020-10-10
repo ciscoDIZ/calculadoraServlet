@@ -11,7 +11,7 @@ public class Gestor implements Servlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
         try {
-            Conexion.setNewConnection("historial.db");
+            Conexion.setNewConnection("src/var/historial.db");
         }catch (Exception e){
             e.printStackTrace();
         }
