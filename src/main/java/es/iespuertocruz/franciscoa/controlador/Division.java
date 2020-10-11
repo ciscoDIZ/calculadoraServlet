@@ -1,6 +1,4 @@
-package controlador;
-
-import modelo.dao.OperacionDAO;
+package es.iespuertocruz.franciscoa.controlador;
 
 /**
  * 

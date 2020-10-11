@@ -1,4 +1,4 @@
-package modelo.dao;
+package es.iespuertocruz.franciscoa.modelo.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -29,6 +29,7 @@ public class ConexionMySQL {
         this.contra = contra;
         cargarDriverMysql();
         mysql();
+
     }
 
     public static ConexionMySQL getConexion() throws Exception {
@@ -53,7 +54,7 @@ public class ConexionMySQL {
 
     public static void cargarDriverMysql() {
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException ex) {
             System.err.println("no carga el driver");
             System.exit(1);

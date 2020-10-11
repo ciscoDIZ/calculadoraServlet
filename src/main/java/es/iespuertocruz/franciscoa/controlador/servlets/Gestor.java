@@ -1,7 +1,7 @@
-package controlador.servlets;
+package es.iespuertocruz.franciscoa.controlador.servlets;
 
-import modelo.dao.ConexionMySQL;
-import modelo.dao.OperacionDAO;
+import es.iespuertocruz.franciscoa.modelo.dao.ConexionMySQL;
+import es.iespuertocruz.franciscoa.modelo.dao.OperacionDAO;
 
 import javax.servlet.*;
 import java.io.IOException;
@@ -13,7 +13,7 @@ public class Gestor implements Servlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
         try {
-            ConexionMySQL.setNewConexion("historial", "devuser", "Monst3r_");
+            ConexionMySQL.setNewConexion("historial", "root", "1q2w3e4r");
         }catch (SQLException e){
             e.printStackTrace();
         }

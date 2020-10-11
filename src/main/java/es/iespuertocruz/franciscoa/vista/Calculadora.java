@@ -1,9 +1,9 @@
-package vista;
+package es.iespuertocruz.franciscoa.vista;
 
-import controlador.Division;
-import controlador.Multiplicacion;
-import controlador.Resta;
-import controlador.Suma;
+import es.iespuertocruz.franciscoa.controlador.Division;
+import es.iespuertocruz.franciscoa.controlador.Multiplicacion;
+import es.iespuertocruz.franciscoa.controlador.Resta;
+import es.iespuertocruz.franciscoa.controlador.Suma;
 
 import java.util.InputMismatchException;
 

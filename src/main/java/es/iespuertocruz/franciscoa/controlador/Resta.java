@@ -1,4 +1,4 @@
-package controlador;
+package es.iespuertocruz.franciscoa.controlador;
 
 
 public class Resta extends Operacion {

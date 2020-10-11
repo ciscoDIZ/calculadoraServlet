@@ -1,4 +1,4 @@
-package controlador;
+package es.iespuertocruz.franciscoa.controlador;
 
 /**
  * Clase abstracta que contriene los atributos necesarios para a partir de ella abstraer el funcionamiento

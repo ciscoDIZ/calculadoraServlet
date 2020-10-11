@@ -1,8 +1,8 @@
-package controlador.servlets;
+package es.iespuertocruz.franciscoa.controlador.servlets;
 
-import modelo.dao.ConexionMySQL;
-import modelo.dao.OperacionDAO;
-import vista.Calculadora;
+import es.iespuertocruz.franciscoa.modelo.dao.ConexionMySQL;
+import es.iespuertocruz.franciscoa.modelo.dao.OperacionDAO;
+import es.iespuertocruz.franciscoa.vista.Calculadora;
 
 import javax.servlet.*;
 import java.io.IOException;
@@ -18,7 +18,7 @@ public class Operadora implements Servlet {
             throw new ServletException("error de configuracion");
         }else {
             try {
-                ConexionMySQL.setNewConexion("historial", "devuser", "Monst3r_");
+                ConexionMySQL.setNewConexion("historial", "root", "1q2w3e4r");
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -41,7 +41,7 @@ public class Operadora implements Servlet {
             double resultadoDouble = calculadora.operar(opa, opb, opr);
             OperacionDAO oDao = new OperacionDAO(null, opa, opb, resultadoDouble, opr);
             oDao.insert();
-            res = "<h2>" + resultadoDouble + "</h2>" + getClass().getResource("");
+            res = "<h2>" + resultadoDouble + "</h2>";
             request.setAttribute("res", res);
             RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
             dispatcher.forward(request, response);

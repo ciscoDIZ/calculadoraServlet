@@ -6,11 +6,11 @@
   <display-name>Archetype Created Web Application</display-name>
     <servlet>
       <servlet-name>operadora</servlet-name>
-      <servlet-class>controlador.servlets.Operadora</servlet-class>
+      <servlet-class>es.iespuertocruz.franciscoa.controlador.servlets.Operadora</servlet-class>
     </servlet>
   <servlet>
     <servlet-name>gestorPersistencia</servlet-name>
-    <servlet-class>controlador.servlets.Gestor</servlet-class>
+    <servlet-class>es.iespuertocruz.franciscoa.controlador.servlets.Gestor</servlet-class>
   </servlet>
     <servlet-mapping>
       <servlet-name>operadora</servlet-name>

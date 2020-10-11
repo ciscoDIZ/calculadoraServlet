@@ -44,18 +44,33 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<html>\n");
       out.write("<body>\n");
       out.write("<h2>Calculadora</h2>\n");
-      out.write("<form action=\"/operadora\" method=\"post\">\n");
+      out.write("<form action=\"operadora\" method=\"post\">\n");
       out.write("    <table>\n");
       out.write("        <tr>\n");
-      out.write("            <td><input type=\"text\" placeholder=\"operando 1\" name=\"opa\"></td>\n");
-      out.write("            <td><input type=\"text\" placeholder=\"operador\" name=\"opr\"></td>\n");
-      out.write("            <td><input type=\"text\" placeholder=\"operando 2\" name=\"opb\"></td>\n");
+      out.write("            <td><input type=\"text\" placeholder=\"operando\" name=\"opa\" size=\"2\"></td>\n");
+      out.write("            <td>\n");
+      out.write("                <select name=\"opr\" id=\"opr\">\n");
+      out.write("                    <option value=\"+\">+</option>\n");
+      out.write("                    <option value=\"-\">-</option>\n");
+      out.write("                    <option value=\"*\">*</option>\n");
+      out.write("                    <option value=\"/\">/</option>\n");
+      out.write("                </select>\n");
+      out.write("            </td>\n");
+      out.write("            <td><input type=\"text\" placeholder=\"operando\" name=\"opb\" size=\"2\"></td>\n");
       out.write("        </tr>\n");
       out.write("        <tr>\n");
-      out.write("            <td colspan=\"2\" style=\"align-content: center;\"><input type=\"submit\" value=\"Enviar\"></td>\n");
-      out.write("            <td><a href=\"procesos.jsp?his=1\">ver historial...</a></td>\n");
+      out.write("            <td colspan=\"2\"><input type=\"submit\" value=\"Enviar\"></td>\n");
+      out.write("            <td><a href=\"gestor?his=1\">ver historial...</a></td>\n");
       out.write("        </tr>\n");
       out.write("    </table>\n");
+      out.write("    ");
+
+        if(request.getAttribute("res") != null){
+            String res = (String)request.getAttribute("res");
+            out.print(res);
+        }
+    
+      out.write("\n");
       out.write("</form>\n");
       out.write("</body>\n");
       out.write("</html>\n");

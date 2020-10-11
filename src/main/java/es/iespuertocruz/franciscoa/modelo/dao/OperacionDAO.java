@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modelo.dao;
+package es.iespuertocruz.franciscoa.modelo.dao;
 
-import modelo.Operacion;
+import es.iespuertocruz.franciscoa.modelo.Operacion;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
